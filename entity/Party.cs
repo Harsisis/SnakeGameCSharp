@@ -52,11 +52,17 @@ namespace SnakeGame.entity
             }
         }
 
+        /// <summary>
+        /// Print snake in ASCII art
+        /// </summary>
         public void PrintSnake()
         {
             Console.WriteLine("           /^\\/^\\\r\n         _|__|  O|\r\n\\/     /~     \\_/ \\\r\n \\____|__________/  \\\r\n        \\_______      \\\r\n                `\\     \\                 \\\r\n                  |     |                  \\\r\n                 /      /                    \\\r\n                /     /                       \\\\\r\n              /      /                         \\ \\\r\n             /     /                            \\  \\\r\n           /     /             _----_            \\   \\\r\n          /     /           _-~      ~-_         |   |\r\n         (      (        _-~    _--_    ~-_     _/   |\r\n          \\      ~-____-~    _-~    ~-_    ~-_-~    /\r\n            ~-_           _-~          ~-_       _-~\r\n               ~--______-~                ~-___-~");
         }
 
+        /// <summary>
+        /// Print fireworks in ASCII art
+        /// </summary>
         public void PrintFireworks()
         {
             Console.WriteLine("                                   .''.       \r\n       .''.      .        *''*    :_\\/_:     . \r\n      :_\\/_:   _\\(/_  .:.*_\\/_*   : /\\ :  .'.:.'.\r\n  .''.: /\\ :   ./)\\   ':'* /\\ * :  '..'.  -=:o:=-\r\n :_\\/_:'.:::.    ' *''*    * '.\\'/.' _\\(/_'.':'.'\r\n : /\\ : :::::     *_\\/_*     -= o =-  /)\\    '  *\r\n  '..'  ':::'     * /\\ *     .'/.\\'.   '\r\n      *            *..*         :");

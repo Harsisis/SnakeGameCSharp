@@ -17,6 +17,12 @@ namespace SnakeGame.entity
             this.playerCase = 1;
         }
 
+        /// <summary>
+        /// Throw dice and check if game is ended or not
+        /// </summary>
+        /// <param name="boardSize"></param>
+        /// <param name="boardDefaultCase"></param>
+        /// <returns></returns>
         public bool ThrowDice(int boardSize, int boardDefaultCase)
         {
             bool isPartyEnded = false;
