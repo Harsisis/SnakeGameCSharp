@@ -16,10 +16,11 @@
         /// <returns></returns>
         public bool ThrowDice(int boardSize, int boardDefaultCase) {
             bool isPartyEnded;
-            Console.WriteLine("\nIt's " + this.playerName + " turn to throw the dice !");
             Random rd = new Random();
+            Console.WriteLine("\nIt's " + this.playerName + " turn to throw the dice !");
             int diceResult = rd.Next(1, 7);
             Console.WriteLine("Dice result : " + diceResult);
+
             this.playerCase += diceResult;
             isPartyEnded = CheckPlayerPosition(boardSize, boardDefaultCase);
 
