@@ -11,10 +11,10 @@ namespace SnakeGame.entity
         public string playerName { get; set; }
         public int playerCase { get; set; }
 
-        public Player(String playerName)
+        public Player(string playerName)
         {
             this.playerName = playerName;
-            this.playerCase = 0;
+            this.playerCase = 1;
         }
 
         public bool ThrowDice(int boardSize, int boardDefaultCase)
