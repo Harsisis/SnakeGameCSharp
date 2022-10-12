@@ -1,10 +1,12 @@
 ﻿namespace SnakeGame.entity {
-    internal class Party {
+    public class Party {
         public List<Player> playerList { get; set; }
         public int boardSize { get; set; }
         public int boardDefaultCase { get; set; }
         public string boardName { get; set; }
         public List<int> boardBonusCaseList { get; set; }
+        public bool isPartyEnded { get; set; } = false;
+
 
         public Party(List<Player> playerList, List<int> boardBonusCaseList, int boardSize, string boardName) {
             this.playerList = playerList;
@@ -31,14 +33,14 @@
 
         public void StartGame() {
             PrintSnake();
-            Console.WriteLine("Let's the " + this.boardName + " begin !!!");
-            bool isPartyEnded = false;
-            while (!isPartyEnded) {
-                for (int j = 0; j < this.playerList.Count; j++) {
+            Console.WriteLine($"Let's the {this.boardName} begin !!!");
+            this.isPartyEnded = false;
+            while (!this.isPartyEnded) {
+                foreach (Player currentPlayer in this.playerList) {
                     do {
-                        isPartyEnded = this.playerList[j].ThrowDice(this.boardSize, this.boardDefaultCase);
-                    } while (boardBonusCaseList.Contains(this.playerList[j].playerCase));
-                    if (isPartyEnded) {
+                        this.isPartyEnded = currentPlayer.ThrowDice(this.boardSize, this.boardDefaultCase);
+                    } while (boardBonusCaseList.Contains(currentPlayer.playerCase));
+                    if (this.isPartyEnded) {
                         PrintFireworks();
                         break;
                     }

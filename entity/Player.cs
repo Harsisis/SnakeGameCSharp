@@ -1,5 +1,5 @@
 ﻿namespace SnakeGame.entity {
-    internal class Player {
+    public class Player {
         public string playerName { get; set; }
         public int playerCase { get; set; }
 
@@ -17,9 +17,9 @@
         public bool ThrowDice(int boardSize, int boardDefaultCase) {
             bool isPartyEnded;
             Random rd = new Random();
-            Console.WriteLine("\nIt's " + this.playerName + " turn to throw the dice !");
+            Console.WriteLine($"\nIt's {this.playerName} turn to throw the dice !");
             int diceResult = rd.Next(1, 7);
-            Console.WriteLine("Dice result : " + diceResult);
+            Console.WriteLine($"Dice result : {diceResult}");
 
             this.playerCase += diceResult;
             isPartyEnded = CheckPlayerPosition(boardSize, boardDefaultCase);
@@ -27,15 +27,15 @@
             return isPartyEnded;
         }
 
-        private bool CheckPlayerPosition(int boardSize, int boardDefaultCase) {
+        public bool CheckPlayerPosition(int boardSize, int boardDefaultCase) {
             if (this.playerCase == boardSize) {
-                Console.WriteLine(this.playerName + " reach the board limit and won the game !!!");
+                Console.WriteLine($"{this.playerName} reach the board limit and won the game !!!");
                 return true;
             } else if (this.playerCase > boardSize) {
                 this.playerCase = boardDefaultCase;
-                Console.WriteLine(this.playerName + " overcome the board limit : new player position " + boardDefaultCase);
+                Console.WriteLine($"{this.playerName} overcome the board limit : new player position {boardDefaultCase}");
             } else {
-                Console.WriteLine(this.playerName + " : new player position " + this.playerCase);
+                Console.WriteLine($"{this.playerName} : new player position {this.playerCase}");
             }
             return false;
         }
