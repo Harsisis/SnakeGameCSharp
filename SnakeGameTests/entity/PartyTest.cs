@@ -1,0 +1,29 @@
+using System.IO;
+using System.Numerics;
+
+namespace SnakeGame.entity {
+    [TestClass]
+    public class PartTest {
+        [TestMethod]
+        public void StartGame_WithCorrectData() {
+            Player player1 = new Player("joueur1");
+            Player player2 = new Player("joueur2");
+            Player player3 = new Player("joueur3");
+
+            Party party = new Party(50, "Mon super jeu du serpent", 25);
+            party.AddPlayer(player1);
+            party.AddPlayer(player2);
+            party.AddPlayer(player3);
+
+            party.AddBonusCase(10);
+            party.AddBonusCase(20);
+            party.AddBonusCase(30);
+            party.AddBonusCase(40);
+            party.AddBonusCase(42);
+
+            party.StartGame();
+            
+            Assert.IsTrue(party.isPartyEnded);
+        }
+    }
+}
