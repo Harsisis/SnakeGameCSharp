@@ -28,12 +28,12 @@ namespace SnakeGame.entity
             this.boardDefaultCase = boardDefaultCase;
         }
 
-        public void addPlayer(Player playerToAdd)
+        public void AddPlayer(Player playerToAdd)
         {
             playerList.Add(playerToAdd);
         }
 
-        public void startParty()
+        public void StartGame()
         {
             Console.WriteLine("Let's the " + this.boardName + " begin !!!");
             bool isPartyEnded = false;
@@ -41,7 +41,7 @@ namespace SnakeGame.entity
             {
                 for (int j = 0; j < this.playerList.Count; j++)
                 {
-                    isPartyEnded = this.playerList[j].throwDice(this.boardSize, this.boardDefaultCase);
+                    isPartyEnded = this.playerList[j].ThrowDice(this.boardSize, this.boardDefaultCase);
                     if (isPartyEnded)
                     {
                         break;

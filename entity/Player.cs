@@ -17,7 +17,7 @@ namespace SnakeGame.entity
             this.playerCase = 0;
         }
 
-        public bool throwDice(int boardSize, int boardDefaultCase)
+        public bool ThrowDice(int boardSize, int boardDefaultCase)
         {
             bool isPartyEnded = false;
             Console.WriteLine("\nIt's " + this.playerName + " turn to throw the dice !");

@@ -10,10 +10,10 @@ namespace SnakeGame
             Player player2 = new Player("joueur2");
 
             Party party = new Party(50, "Mon super jeu du serpent", 25);
-            party.addPlayer(player1);
-            party.addPlayer(player2);
+            party.AddPlayer(player1);
+            party.AddPlayer(player2);
 
-            party.startParty();
+            party.StartGame();
         }
     }
 }
