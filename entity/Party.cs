@@ -35,6 +35,7 @@ namespace SnakeGame.entity
 
         public void StartGame()
         {
+            PrintSnake();
             Console.WriteLine("Let's the " + this.boardName + " begin !!!");
             bool isPartyEnded = false;
             while (!isPartyEnded)
@@ -44,11 +45,21 @@ namespace SnakeGame.entity
                     isPartyEnded = this.playerList[j].ThrowDice(this.boardSize, this.boardDefaultCase);
                     if (isPartyEnded)
                     {
+                        PrintFireworks();
                         break;
                     }
                 }
             }
         }
 
+        public void PrintSnake()
+        {
+            Console.WriteLine("           /^\\/^\\\r\n         _|__|  O|\r\n\\/     /~     \\_/ \\\r\n \\____|__________/  \\\r\n        \\_______      \\\r\n                `\\     \\                 \\\r\n                  |     |                  \\\r\n                 /      /                    \\\r\n                /     /                       \\\\\r\n              /      /                         \\ \\\r\n             /     /                            \\  \\\r\n           /     /             _----_            \\   \\\r\n          /     /           _-~      ~-_         |   |\r\n         (      (        _-~    _--_    ~-_     _/   |\r\n          \\      ~-____-~    _-~    ~-_    ~-_-~    /\r\n            ~-_           _-~          ~-_       _-~\r\n               ~--______-~                ~-___-~");
+        }
+
+        public void PrintFireworks()
+        {
+            Console.WriteLine("                                   .''.       \r\n       .''.      .        *''*    :_\\/_:     . \r\n      :_\\/_:   _\\(/_  .:.*_\\/_*   : /\\ :  .'.:.'.\r\n  .''.: /\\ :   ./)\\   ':'* /\\ * :  '..'.  -=:o:=-\r\n :_\\/_:'.:::.    ' *''*    * '.\\'/.' _\\(/_'.':'.'\r\n : /\\ : :::::     *_\\/_*     -= o =-  /)\\    '  *\r\n  '..'  ':::'     * /\\ *     .'/.\\'.   '\r\n      *            *..*         :");
+        }
     }
 }
