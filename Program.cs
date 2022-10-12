@@ -1,11 +1,8 @@
 ﻿using SnakeGame.entity;
 
-namespace SnakeGame
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace SnakeGame {
+    class Program {
+        static void Main(string[] args) {
             Player player1 = new Player("joueur1");
             Player player2 = new Player("joueur2");
             Player player3 = new Player("joueur3");
@@ -14,6 +11,12 @@ namespace SnakeGame
             party.AddPlayer(player1);
             party.AddPlayer(player2);
             party.AddPlayer(player3);
+
+            party.AddBonusCase(10);
+            party.AddBonusCase(20);
+            party.AddBonusCase(30);
+            party.AddBonusCase(40);
+            party.AddBonusCase(42);
 
             party.StartGame();
         }
