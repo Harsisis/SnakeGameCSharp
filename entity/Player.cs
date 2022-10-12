@@ -22,7 +22,7 @@ namespace SnakeGame.entity
             bool isPartyEnded = false;
             Console.WriteLine("\nIt's " + this.playerName + " turn to throw the dice !");
             Random rd = new Random();
-            int diceResult = rd.Next(1, 6);
+            int diceResult = rd.Next(1, 7);
             Console.WriteLine("Dice result : " + diceResult);
 
             if ((this.playerCase + diceResult) == boardSize)
